@@ -31,6 +31,7 @@ export class NewTicketComponent implements OnInit, AfterViewInit{
 
   onSubmit() {
     this.add.emit({title: this.ticketTitle, request: this.ticketRequest});
-    this.form?.nativeElement.reset();
+    this.ticketTitle = '';
+    this.ticketRequest = '';
   }
 }
